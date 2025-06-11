@@ -1,0 +1,139 @@
+
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: #11012e;
+}
+
+.menu{
+background-color: #ff018f;
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+font-size: 20px;
+text-align: justify;
+}
+
+.menu li{
+position:relative;
+}
+
+.menu > li{
+padding: 15px 20px;
+}
+
+.menu a{
+color: #ffcc00;
+text-decoration: none;
+display: block;
+}
+
+.menu > li:hover{
+background-color: #2a0c62;
+}
+
+.submenu{
+display:none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #2a0c62;
+list-style: none;
+padding: 0;
+margin: 0;
+min-width: 150px;
+}
+
+.submenu li{
+padding: 10px;
+}
+
+.submenu a{
+color: #ffcc00;
+}
+
+.menu li:hover .submenu{
+display: block;
+}
+.izquierda{
+background-color: #a6a1e1;
+height: 600px;
+width: 400px;
+margin: 20px;
+border-radius: 20px;
+float: left;
+}
+.derecha{
+background-color: #a6a1e1;
+height: 600px;
+width: 980px;
+margin-top: 20px;
+margin-left: 20px;
+margin-right: 20px;
+border-radius: 20px;
+float: left;
+}
+.pie{
+background-color: #2a0c62;
+color: #ffcc00;
+text-align: center;
+padding: 10px 0;
+margin-top: 660px;
+width: 100%;
+}
+.pie2{
+    background-color: #2a0c62;
+    color: #ffcc00;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 750px;
+    width: 100%;
+}
+.contenidod{
+margin-left: 180px;
+margin-top: 10px;
+background-color: #a6a1e1;
+height: 300px;
+width: 400px;
+border-radius: 20px;
+padding: 20px;
+text-align: center;
+float: left;
+}
+.contenidoi{
+margin-top: 10px;
+margin-left: 150px;
+background-color: #a6a1e1;
+height: 300px;
+width: 400px;
+border-radius: 20px;
+padding: 20px;
+text-align: center;
+float: left;
+}
+.h1{
+color: #ffcc00;
+font-size: 40px;
+text-align: center;
+margin-top: 10px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.h11{
+color: #ffcc00;
+font-size: 45px;
+margin-top: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+}
+img{
+    border-radius: 20px;
+vertical-align: top;
+}
+.titulo{
+color: #ffcc00;
+font-size: 30px;
+margin-top: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+margin-right: 700px;
+}

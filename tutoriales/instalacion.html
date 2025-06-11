@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación desde cero - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="#distribuciones">Distribuciones</a>
+                <ul>
+                    <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                    <li><a href="../distribuciones/debian.html">Debian</a></li>
+                    <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                    <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                    <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tutoriales">Tutoriales</a>
+                <ul>
+                    <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                    <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                    <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                    <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                    <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                </ul>
+            </li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li>
+                <a href="#herramientas">Herramientas</a>
+                <ul>
+                    <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                    <li><a href="#editores">Editores de texto</a></li>
+                    <li><a href="#desarrollo">Software de desarrollo</a></li>
+                    <li><a href="#productividad">Aplicaciones de productividad</a></li>
+                    <li><a href="#gestion-archivos">Sistemas de gestión de archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>Instalación desde cero</h1>
+    <section>
+        <p>La instalación de Linux desde cero es un proceso que permite a los usuarios configurar su sistema a medida, eligiendo las opciones que mejor se adapten a sus necesidades. A continuación, se describe el proceso general para instalar una distribución de Linux.</p>
+
+        <h2>1. Selección de la distribución</h2>
+        <p>Antes de comenzar, es importante elegir una distribución que se adapte a tus necesidades. Algunas de las más recomendadas para principiantes son:</p>
+        <ul>
+            <li>Ubuntu</li>
+            <li>Debian</li>
+            <li>Fedora</li>
+            <li>Linux Mint</li>
+            <li>Manjaro</li>
+        </ul>
+
+        <h2>2. Descarga de la imagen ISO</h2>
+        <p>Cada distribución proporciona una imagen ISO en su sitio oficial. Es fundamental descargar la versión adecuada para tu arquitectura (x86, x86_64, ARM).</p>
+
+        <h2>3. Creación de un medio de instalación</h2>
+        <p>Se debe crear un USB de arranque utilizando herramientas como:</p>
+        <ul>
+            <li>Rufus (Windows)</li>
+            <li>balenaEtcher (Windows, macOS, Linux)</li>
+            <li>dd (Linux, macOS - línea de comandos)</li>
+        </ul>
+
+        <h2>4. Configuración de la BIOS/UEFI</h2>
+        <p>Antes de instalar Linux, se debe ingresar a la configuración del BIOS/UEFI y:</p>
+        <ul>
+            <li>Habilitar el arranque desde USB.</li>
+            <li>Desactivar Secure Boot si la distribución lo requiere.</li>
+        </ul>
+
+        <h2>5. Instalación del sistema</h2>
+        <p>Una vez iniciado desde el USB de arranque, se sigue el asistente de instalación de la distribución. Los pasos comunes incluyen:</p>
+        <ul>
+            <li>Selección de idioma y teclado</li>
+            <li>Particionamiento del disco: Se puede usar el modo automático o manual.</li>
+            <li>Configuración de usuario y contraseña</li>
+            <li>Instalación de paquetes esenciales</li>
+        </ul>
+
+        <h2>6. Primer arranque y configuración inicial</h2>
+        <p>Después de la instalación, es recomendable:</p>
+        <ul>
+            <li>Actualizar el sistema:<br>
+                <code>sudo apt update && sudo apt upgrade</code> (Debian/Ubuntu)<br>
+                <code>dnf update</code> (Fedora)<br>
+                <code>pacman -Syu</code> (Arch)
+            </li>
+            <li>Instalar software adicional según las necesidades del usuario.</li>
+            <li>Configurar la interfaz gráfica y personalizar el sistema.</li>
+        </ul>
+
+          <p><strong>Nota:</strong> Este es el proceso general, pero puede variar según la distribución específica que elijas.</p>
+    </section>
+</body>
+</html>

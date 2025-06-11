@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de entornos gráficos - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="#distribuciones">Distribuciones</a>
+                <ul>
+                    <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                    <li><a href="../distribuciones/debian.html">Debian</a></li>
+                    <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                    <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                    <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tutoriales">Tutoriales</a>
+                <ul>
+                    <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                    <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                    <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                    <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                    <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                </ul>
+            </li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li>
+                <a href="#herramientas">Herramientas</a>
+                <ul>
+                    <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                    <li><a href="#editores">Editores de texto</a></li>
+                    <li><a href="#desarrollo">Software de desarrollo</a></li>
+                    <li><a href="#productividad">Aplicaciones de productividad</a></li>
+                    <li><a href="#gestion-archivos">Sistemas de gestión de archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>Configuración de entornos gráficos en Linux</h1>
+    <section>
+        <p>Linux ofrece una amplia variedad de entornos gráficos que permiten personalizar la apariencia y funcionalidad del sistema según las necesidades del usuario. A continuación, se presentan los pasos generales para instalar y configurar un entorno gráfico.</p>
+
+        <h2>1. Elección del entorno gráfico</h2>
+        <p>Cada entorno de escritorio tiene características únicas en cuanto a diseño, rendimiento y consumo de recursos. Algunas opciones populares incluyen:</p>
+        <ul>
+            <li><strong>GNOME:</strong> Moderno y fácil de usar, predeterminado en Ubuntu y Fedora.</li>
+            <li><strong>KDE Plasma:</strong> Altamente personalizable, con efectos visuales avanzados.</li>
+            <li><strong>XFCE:</strong> Ligero y eficiente, ideal para equipos con recursos limitados.</li>
+            <li><strong>LXQt:</strong> Opción aún más ligera que XFCE, pensada para rendimiento.</li>
+            <li><strong>MATE:</strong> Clásico, basado en GNOME 2, utilizado en distribuciones como Linux Mint.</li>
+            <li><strong>Cinnamon:</strong> Diseñado para Linux Mint, con un enfoque en facilidad de uso y estética clásica.</li>
+        </ul>
+
+        <h2>2. Instalación del entorno gráfico</h2>
+        <p>Dependiendo de la distribución, se puede instalar un entorno gráfico con los siguientes comandos:</p>
+
+        <h3>Ubuntu/Debian (APT)</h3>
+        <pre><code>sudo apt update && sudo apt install ubuntu-desktop  # GNOME
+sudo apt install kde-plasma-desktop  # KDE Plasma
+sudo apt install xfce4  # XFCE
+sudo apt install lxqt  # LXQt
+sudo apt install mate-desktop-environment  # MATE</code></pre>
+
+        <h3>Fedora (DNF)</h3>
+        <pre><code>sudo dnf groupinstall "GNOME Desktop Environment"
+sudo dnf groupinstall "KDE Plasma Workspaces"
+sudo dnf groupinstall "Xfce Desktop"
+sudo dnf groupinstall "LXQt Desktop"
+sudo dnf groupinstall "MATE Desktop"</code></pre>
+
+        <h3>Arch Linux (Pacman)</h3>
+        <pre><code>sudo pacman -S gnome gnome-extra
+sudo pacman -S plasma kde-applications
+sudo pacman -S xfce4 xfce4-goodies
+sudo pacman -S lxqt
+sudo pacman -S mate mate-extra</code></pre>
+
+        <h2>3. Configuración del gestor de inicio de sesión</h2>
+        <p>Después de instalar el entorno gráfico, es necesario asegurarse de que el sistema arranque con el gestor adecuado. Algunas opciones populares incluyen:</p>
+        <ul>
+            <li><strong>GDM:</strong> GNOME Display Manager</li>
+            <li><strong>SDDM:</strong> Para KDE Plasma</li>
+            <li><strong>LightDM:</strong> Ligero, compatible con XFCE y otros escritorios</li>
+        </ul>
+        <p>Para activarlo en sistemas basados en systemd:</p>
+        <pre><code>sudo systemctl enable gdm  # GNOME
+sudo systemctl enable sddm  # KDE Plasma
+sudo systemctl enable lightdm  # XFCE, MATE, LXQt</code></pre>
+
+        <h2>4. Personalización y ajustes</h2>
+        <p>Una vez instalado, se pueden configurar elementos como:</p>
+        <ul>
+            <li><strong>Temas e íconos:</strong> Se pueden instalar desde los ajustes o usando herramientas como Plasma Settings, GNOME Tweaks o LXQt Configuration Center.</li>
+            <li><strong>Extensiones:</strong> GNOME y KDE permiten agregar funcionalidades extra mediante extensiones.</li>
+            <li><strong>Atajos de teclado:</strong> Configurar accesos rápidos para mejorar la productividad.</li>
+            <li><strong>Efectos gráficos:</strong> Activar o desactivar animaciones según el rendimiento del equipo.</li>
+        </ul>
+    </section>
+</body>
+</html>

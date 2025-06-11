@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización con scripts - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="#distribuciones">Distribuciones</a>
+                <ul>
+                    <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                    <li><a href="../distribuciones/debian.html">Debian</a></li>
+                    <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                    <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                    <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tutoriales">Tutoriales</a>
+                <ul>
+                    <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                    <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                    <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                    <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                    <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                </ul>
+            </li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li>
+                <a href="#herramientas">Herramientas</a>
+                <ul>
+                    <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                    <li><a href="#editores">Editores de texto</a></li>
+                    <li><a href="#desarrollo">Software de desarrollo</a></li>
+                    <li><a href="#productividad">Aplicaciones de productividad</a></li>
+                    <li><a href="#gestion-archivos">Sistemas de gestión de archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>Automatización con scripts en Linux</h1>
+    <section>
+        <p>La automatización con scripts es una técnica clave en Linux para simplificar tareas repetitivas, mejorar la eficiencia y administrar el sistema de manera más efectiva. Los scripts en Bash son los más utilizados, aunque también se pueden emplear otros lenguajes como Python o Perl.</p>
+
+        <h2>1. ¿Qué es un script?</h2>
+        <p>Un script es un archivo de texto que contiene una serie de comandos que pueden ejecutarse automáticamente sin intervención manual. Se utilizan para tareas como la gestión de archivos, la administración de sistemas y la ejecución de procesos en segundo plano.</p>
+
+        <h2>2. Creación de un script en Bash</h2>
+        <p>Para escribir un script en Bash, sigue estos pasos:</p>
+        <ol>
+            <li>Abre un editor de texto (Nano, Vim, etc.).</li>
+            <li>Escribe el código del script, comenzando con la línea <code>#!/bin/bash</code>.</li>
+            <li>Guarda el archivo con la extensión <code>.sh</code>.</li>
+        </ol>
+        <p>Ejemplo de un script básico:</p>
+        <pre><code>echo "Hola, bienvenido a la automatización en Linux"
+fecha=$(date)
+echo "La fecha y hora actual es: $fecha"</code></pre>
+
+        <h2>3. Asignar permisos de ejecución</h2>
+        <p>Antes de ejecutar un script, es necesario asignarle permisos de ejecución:</p>
+        <pre><code>chmod +x script.sh</code></pre>
+        <p>Luego, puedes ejecutar el script con:</p>
+        <pre><code>./script.sh</code></pre>
+
+        <h2>4. Variables y estructuras de control</h2>
+        <p>Los scripts pueden usar variables y estructuras de control para hacerlos más dinámicos.</p>
+        <p><strong>Uso de variables:</strong></p>
+        <pre><code>nombre="Eduardo"
+echo "Hola, $nombre"</code></pre>
+
+        <p><strong>Condicionales (if):</strong></p>
+        <pre><code>#!/bin/bash
+echo "Ingrese un número:"
+read numero
+if [ $numero -gt 10 ]; then
+  echo "El número es mayor que 10"
+else
+  echo "El número es menor o igual a 10"
+fi</code></pre>
+
+        <p><strong>Bucles (for):</strong></p>
+        <pre><code>for i in {1..5}
+do
+  echo "Iteración $i"
+done</code></pre>
+
+        <h2>5. Automatización de tareas con cron</h2>
+        <p>Los scripts pueden ejecutarse de forma automática con <code>cron</code>. Para editar las tareas programadas:</p>
+        <pre><code>crontab -e</code></pre>
+        <p>Ejemplo de tarea que ejecuta un script cada día a las 3 AM:</p>
+        <pre><code>0 3 * * * /ruta/script.sh</code></pre>
+
+        <h2>6. Uso de scripts en administración del sistema</h2>
+        <p>Los scripts se emplean para tareas como:</p>
+        <ul>
+            <li>Copias de seguridad automáticas.</li>
+            <li>Monitorización de recursos del sistema.</li>
+            <li>Instalación y configuración de software.</li>
+            <li>Envío de alertas por correo electrónico.</li>
+        </ul>
+    </section>
+</body>
+</html>

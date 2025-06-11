@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal y comandos básicos - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="#distribuciones">Distribuciones</a>
+                <ul>
+                    <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                    <li><a href="../distribuciones/debian.html">Debian</a></li>
+                    <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                    <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                    <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tutoriales">Tutoriales</a>
+                <ul>
+                    <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                    <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                    <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                    <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                    <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                </ul>
+            </li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li>
+                <a href="#herramientas">Herramientas</a>
+                <ul>
+                    <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                    <li><a href="#editores">Editores de texto</a></li>
+                    <li><a href="#desarrollo">Software de desarrollo</a></li>
+                    <li><a href="#productividad">Aplicaciones de productividad</a></li>
+                    <li><a href="#gestion-archivos">Sistemas de gestión de archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>Terminal y comandos básicos en Linux</h1>
+    <section>
+        <p>La terminal es una herramienta poderosa en Linux que permite ejecutar comandos de manera eficiente. Aprender a usarla es esencial para administrar el sistema, instalar software y automatizar tareas.</p>
+
+        <h2>1. Navegación por el sistema de archivos</h2>
+        <ul>
+            <li><code>pwd</code> &rarr; Muestra la ubicación actual.</li>
+            <li><code>ls</code> &rarr; Lista archivos y carpetas en un directorio.</li>
+            <li><code>cd &lt;ruta&gt;</code> &rarr; Cambia al directorio especificado.</li>
+            <li><code>mkdir &lt;nombre&gt;</code> &rarr; Crea una nueva carpeta.</li>
+            <li><code>rm &lt;archivo&gt;</code> &rarr; Borra un archivo.</li>
+        </ul>
+
+        <h2>2. Gestión de archivos y permisos</h2>
+        <ul>
+            <li><code>cp &lt;origen&gt; &lt;destino&gt;</code> &rarr; Copia un archivo o carpeta.</li>
+            <li><code>mv &lt;origen&gt; &lt;destino&gt;</code> &rarr; Mueve o renombra un archivo.</li>
+            <li><code>chmod 755 &lt;archivo&gt;</code> &rarr; Cambia permisos de acceso.</li>
+            <li><code>chown usuario:grupo &lt;archivo&gt;</code> &rarr; Modifica propietario y grupo.</li>
+        </ul>
+
+        <h2>3. Administración de paquetes</h2>
+        <h3>Debian/Ubuntu:</h3>
+        <pre><code>sudo apt update && sudo apt upgrade
+sudo apt install &lt;paquete&gt;
+sudo apt remove &lt;paquete&gt;</code></pre>
+
+        <h3>Fedora:</h3>
+        <pre><code>sudo dnf update
+sudo dnf install &lt;paquete&gt;
+sudo dnf remove &lt;paquete&gt;</code></pre>
+
+        <h3>Arch Linux:</h3>
+        <pre><code>sudo pacman -Syu
+sudo pacman -S &lt;paquete&gt;
+sudo pacman -R &lt;paquete&gt;</code></pre>
+
+        <h2>4. Información del sistema y procesos</h2>
+        <ul>
+            <li><code>uname -a</code> &rarr; Muestra detalles del kernel.</li>
+            <li><code>top</code> &rarr; Monitorea consumo de CPU y memoria.</li>
+            <li><code>ps aux</code> &rarr; Lista todos los procesos activos.</li>
+            <li><code>kill &lt;PID&gt;</code> &rarr; Termina un proceso específico.</li>
+        </ul>
+
+        <h2>5. Gestión de usuarios y grupos</h2>
+        <ul>
+            <li><code>whoami</code> &rarr; Muestra el usuario activo.</li>
+            <li><code>adduser &lt;usuario&gt;</code> &rarr; Crea un nuevo usuario.</li>
+            <li><code>passwd &lt;usuario&gt;</code> &rarr; Cambia la contraseña de un usuario.</li>
+            <li><code>groups &lt;usuario&gt;</code> &rarr; Lista los grupos a los que pertenece un usuario.</li>
+        </ul>
+    </section>
+</body>
+</html>

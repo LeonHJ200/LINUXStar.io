@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de paquetes - Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="#distribuciones">Distribuciones</a>
+                <ul>
+                    <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                    <li><a href="../distribuciones/debian.html">Debian</a></li>
+                    <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                    <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                    <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tutoriales">Tutoriales</a>
+                <ul>
+                    <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                    <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                    <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                    <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                    <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                </ul>
+            </li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li>
+                <a href="#herramientas">Herramientas</a>
+                <ul>
+                    <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                    <li><a href="#editores">Editores de texto</a></li>
+                    <li><a href="#desarrollo">Software de desarrollo</a></li>
+                    <li><a href="#productividad">Aplicaciones de productividad</a></li>
+                    <li><a href="#gestion-archivos">Sistemas de gestión de archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <h1>Administración de paquetes en Linux</h1>
+    <section>
+        <p>La administración de paquetes es un aspecto fundamental en Linux, ya que permite instalar, actualizar y eliminar software de manera eficiente. Cada distribución utiliza su propio gestor de paquetes, optimizado para su ecosistema.</p>
+
+        <h2>1. ¿Qué es un paquete?</h2>
+        <p>Un paquete es un conjunto de archivos necesarios para la instalación de un programa. Puede incluir ejecutables, bibliotecas, configuraciones y documentación.</p>
+
+        <h2>2. Gestores de paquetes según la distribución</h2>
+        <p>Cada distribución utiliza su propio sistema de gestión de paquetes:</p>
+        <ul>
+            <li><strong>Debian y Ubuntu:</strong> APT (Advanced Package Tool), trabaja con paquetes .deb.</li>
+            <li><strong>Fedora y RHEL:</strong> DNF (Dandified Yum), administra paquetes .rpm.</li>
+            <li><strong>Arch Linux:</strong> Pacman, maneja paquetes .pkg.tar.zst.</li>
+            <li><strong>openSUSE:</strong> Zypper, especializado en paquetes RPM.</li>
+            <li><strong>Gentoo:</strong> Portage, basado en compilación desde código fuente.</li>
+        </ul>
+
+        <h2>3. Comandos básicos de administración de paquetes</h2>
+        <h3>Debian/Ubuntu (APT)</h3>
+        <pre><code>sudo apt update
+sudo apt upgrade
+sudo apt install &lt;paquete&gt;
+sudo apt remove &lt;paquete&gt;
+sudo apt autoremove</code></pre>
+
+        <h3>Fedora/RHEL (DNF)</h3>
+        <pre><code>sudo dnf check-update
+sudo dnf upgrade
+sudo dnf install &lt;paquete&gt;
+sudo dnf remove &lt;paquete&gt;</code></pre>
+
+        <h3>Arch Linux (Pacman)</h3>
+        <pre><code>sudo pacman -Syu
+sudo pacman -S &lt;paquete&gt;
+sudo pacman -R &lt;paquete&gt;
+sudo pacman -Qe</code></pre>
+
+        <h3>openSUSE (Zypper)</h3>
+        <pre><code>sudo zypper refresh
+sudo zypper update
+sudo zypper install &lt;paquete&gt;
+sudo zypper remove &lt;paquete&gt;</code></pre>
+
+        <h2>4. Instalación de paquetes desde código fuente</h2>
+        <p>Algunas distribuciones permiten instalar software compilándolo desde el código fuente:</p>
+        <pre><code>./configure
+make
+sudo make install</code></pre>
+        <p>Este método es común en Gentoo, Slackware y distribuciones minimalistas.</p>
+
+        <h2>5. Gestión de paquetes Snap y Flatpak</h2>
+        <p>Para instalar software universalmente sin depender de la distribución, se pueden usar:</p>
+
+        <p><strong>Snap:</strong></p>
+        <pre><code>sudo snap install &lt;paquete&gt;</code></pre>
+
+        <p><strong>Flatpak:</strong></p>
+        <pre><code>flatpak install flathub &lt;paquete&gt;</code></pre>
+
+        <p>Estos sistemas permiten ejecutar aplicaciones en entornos aislados.</p>
+    </section>
+</body>
+</html>

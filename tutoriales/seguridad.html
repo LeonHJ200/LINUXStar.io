@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad en Linux</title>
+    <link rel="stylesheet" href="../styl.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+                <a href="#distribuciones">Distribuciones</a>
+                <ul>
+                    <li><a href="../distribuciones/ubuntu.html">Ubuntu</a></li>
+                    <li><a href="../distribuciones/debian.html">Debian</a></li>
+                    <li><a href="../distribuciones/fedora.html">Fedora</a></li>
+                    <li><a href="../distribuciones/arch.html">Arch Linux</a></li>
+                    <li><a href="../distribuciones/otras.html">Otras distribuciones</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tutoriales">Tutoriales</a>
+                <ul>
+                    <li><a href="../tutoriales/instalacion.html">Instalación desde cero</a></li>
+                    <li><a href="../tutoriales/entornos.html">Configuración de entornos gráficos</a></li>
+                    <li><a href="../tutoriales/paquetes.html">Administración de paquetes</a></li>
+                    <li><a href="../tutoriales/seguridad.html">Seguridad en Linux</a></li>
+                    <li><a href="../tutoriales/automatizacion.html">Automatización con scripts</a></li>
+                </ul>
+            </li>
+            <li><a href="#comunidad">Comunidad</a></li>
+            <li>
+                <a href="#herramientas">Herramientas</a>
+                <ul>
+                    <li><a href="../herramientas/terminal.html">Terminal y comandos básicos</a></li>
+                    <li><a href="#editores">Editores de texto</a></li>
+                    <li><a href="#desarrollo">Software de desarrollo</a></li>
+                    <li><a href="#productividad">Aplicaciones de productividad</a></li>
+                    <li><a href="#gestion-archivos">Sistemas de gestión de archivos</a></li>
+                </ul>
+            </li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <h1>Seguridad en Linux</h1>
+    <section>
+        <h2>1. Principios de seguridad en Linux</h2>
+        <ul>
+            <li><strong>Mínimos privilegios:</strong> Cada usuario debe tener solo los permisos necesarios para su tarea.</li>
+            <li><strong>Actualización constante:</strong> Mantener el sistema y paquetes actualizados reduce vulnerabilidades.</li>
+            <li><strong>Seguridad por capas:</strong> Se recomienda combinar múltiples medidas de seguridad.</li>
+        </ul>
+
+        <h2>2. Gestión de usuarios y permisos</h2>
+        <p>El control de accesos es esencial para evitar modificaciones no autorizadas.</p>
+        <ul>
+            <li><strong>Para listar usuarios en el sistema:</strong><br>
+                <code>cat /etc/passwd</code></li><br>
+            <li><strong>Para modificar permisos de archivos:</strong><br>
+                <code>chmod 700 archivo</code></li>
+                <code>chown usuario:grupo archivo</code></li>
+        </ul>
+
+        <h2>3. Firewall y reglas de red</h2>
+        <p>Un firewall ayuda a filtrar tráfico y proteger el sistema de accesos externos.</p>
+        <ul>
+            <li><strong>Uso de iptables para reglas básicas:</strong><br>
+                <code>sudo iptables -A INPUT -p tcp --dport 22 -j DROP</code></li><br>
+            <li><strong>Uso de ufw(más sencillo):</strong><br>
+                <code>sudo ufw enable #Activar firewall</code><br>
+                <code>sudo ufw allow 80/tcp #Permitir HTTP</code></li>
+        </ul>
+
+        <h2>4. Protección contra malware y análisis de seguridad</h2>
+        <p>Aunque Linux tiene menor incidencia de virus, es recomendable usar herramientas de análisis:</p>
+        <ul>
+            <li><strong>ClamAV:</strong> Antivirus de código abierto.
+            <code>sudo apt install clamav</code><br>
+            <code>clamscan -r /home</code></li><br>
+            <li><strong>Chkrootkit:</strong> Detecta rootkits en el sistema.
+            <code>sudo apt install chkrootkit</code><br>
+            <code>sudo chkrootkit</code></li>
+        </ul>
+
+        <h2>5. Cifrado de datos</h2>
+        <p>El cifrado protege la información sensible. Algunas opciones incluyen:</p>
+        <ul>
+            <li><strong>EncFS:</strong> Para cifrar carpetas individuales. <br>
+            <code>encfs ~/cifrado ~/acceso</code></li><br>
+            <li><strong>LUKS:</strong> Cifrado de discos completos.<br
+            <code>sudo cryptsetup luksFormat /dev/sdX</code></li>
+        </ul>
+
+        <h2>6. Auditoría y monitoreo del sistema</h2>
+        <p>Herramientas como auditd permiten registrar eventos de seguridad.</p>
+        <ul>
+            <li><strong>Para instalar y activar:</strong><br>
+                <code>sudo apt install auditd</code><br>
+                <code>sudo systemctl enable auditd</code></li>
+        </ul>
+    </section>
+</body>
+</html>
